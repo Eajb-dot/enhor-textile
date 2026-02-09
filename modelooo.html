@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Modèles-Enhor textile 英皓</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Migra&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Goody&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="modele.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER : logo + menu
+       ========================= -->
+  <header class="header">
+
+    <!-- Conteneur central -->
+    <div class="header__content">
+
+      <!-- Logo -->
+      <img
+        class="header__logo"
+        src="new_Logo_blanc.png"
+        alt="Logo de la marque"
+      >
+
+    </div>
+
+  </header>
+
+  <!-- =========================
+       MAIN : le contenu
+       ========================= -->
+  <main class="container">
+
+        <section id="about" class="section">
+            <h2 class="section__title">Choissisez votre modèle.</h2>
+
+            <div class="apropos">
+                <div class="apropos__texte">
+
+                    <p class="apropos__p">
+                        Notre équipe vous propose des modèles de maillot de bain sur-mesure pour s'adapter à votre quotidien : Technique, Léger , Séchage-rapide ou Déperlant.
+                        Si un modèle nécessite des ajustements , n'hésitez pas à nous contacter par mail.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="models-page">
+
+            <!-- CAROUSEL + PEDALES -->
+            <div class="carousel" aria-label="Photos des modèles">
+                <button class="carousel-btn" type="button" id="prevBtn" aria-label="Précédent">‹</button>
+
+                <div class="carousel-track" id="track">
+                <!-- Thumbs cliquables -->
+                <img class="thumb is-active" src="Stretch_swim_photo.png" alt="Photo 1"
+                    data-id="p1" data-full="Stretch_swim_photo.png"
+                    data-title="Modèle 1 — Stretch Swim"
+                    data-text="Tissu déperlant et extensible dans 4 directions\n Ceinture élastique\n Confort assuré grâce à la doublure en filet\n" />
+
+                <img class="thumb" src="Swin_short_2.png" alt="Photo 2"
+                    data-id="p2" data-full="Swin_short_2.png"
+                    data-title="Modèle 2 — Swim Short"
+                    data-text="Tissu séchage rapide\n Ceinture élastique\n 2 poches avant et 1 poche arrière avec rachat\n Ajout d'un filet en mersh possible\n" />
+
+                <img class="thumb" src="shot_3.png" alt="Photo 3"
+                    data-id="p3" data-full="shot_3.png"
+                    data-title="Le Tissus Wellington Bleu"
+                    data-text="100% Polyester Recyclé \n Adapté pour tous nos modèles" />
+                </div>
+
+                <button class="carousel-btn" type="button" id="nextBtn" aria-label="Suivant">›</button>
+            </div>
+
+            <!-- LIGNES QUI S'OUVRENT (2 colonnes) -->
+            <div class="open-lines" id="openLines">
+
+                <!-- Ligne 1 -->
+                <article class="line" id="line-p1" hidden>
+                    <div class="line-grid">
+                        <div class="line-left">
+                        <img class="line-photo" src="" alt="Photo sélectionnée">
+                        </div>
+                        <div class="line-right">
+                            <h3 class="line-title"></h3>
+                            <p class="line-text"></p>
+
+                            <button class="close-line" type="button" data-close>Fermer</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Ligne 2 -->
+                <article class="line" id="line-p2" hidden>
+                    <div class="line-grid">
+                        <div class="line-left">
+                        <img class="line-photo" src="" alt="Photo sélectionnée">
+                        </div>
+                        <div class="line-right">
+                            <h3 class="line-title"></h3>
+                            <p class="line-text"></p>
+
+                            <button class="close-line" type="button" data-close>Fermer</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Ligne 3 -->
+                <article class="line" id="line-p3" hidden>
+                    <div class="line-grid">
+                        <div class="line-left">
+                        <img class="line-photo" src="" alt="Photo sélectionnée">
+                        </div>
+                        <div class="line-right">
+                            <h3 class="line-title"></h3>
+                            <p class="line-text"></p>
+
+                            <button class="close-line" type="button" data-close>Fermer</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    <script src="modele.js"></script>
+  </main>
+
+  <!-- =========================
+       FOOTER : marque + langues + email
+       ========================= -->
+  <footer class="footer">
+    <div class="footer__inner">
+
+      <!-- Nom de la marque -->
+      <p class="footer__brand">© Enhor Textile 英皓</p>
+
+      <!-- Liens de langue (exemple) -->
+      <!-- Tu peux remplacer les href par tes vraies pages :
+           index-en.html, index-zh.html etc. -->
+      <div class="footer__links">
+        <a class="footer__link" href="Enhor_textile_index.html">Accueil</a>
+        <a class="footer__link" href="modelooo.html">Français</a>
+        <a class="footer__link" href="index_en.html">English</a>
+      </div>
+
+      <!-- Email cliquable -->
+      <a class="footer__link" href="mailto:vicky@yinghaotex.com">vicky@yinghaotex.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>
