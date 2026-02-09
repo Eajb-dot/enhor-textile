@@ -156,9 +156,20 @@
     </div>
   </footer>
   <script src="Home-en.js"></script>
+  
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', () => {
+        setTimeout(() => {
+          history.replaceState(null, null, window.location.pathname);
+        }, 0);
+      });
+    });
+  </script>
 </body>
 
 </html>
+
 
 
 
