@@ -175,6 +175,13 @@ body,p{
   border-radius: 12px;
 }
 
+.apropos__short{
+  width: 100%;
+  height: 340px;      /* hauteur fixe (modifiable) */
+  object-fit: cover;  /* évite de déformer l’image */
+  border-radius: 14px;
+}
+
 /* Texte à droite */
 .apropos__texte {
   padding: 8px;
@@ -490,5 +497,6 @@ body,p{
     padding: 22px;
   }
 }
+
 
 
