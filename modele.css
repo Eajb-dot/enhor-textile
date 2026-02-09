@@ -1,0 +1,315 @@
+
+/* =========================
+   Palette de couleurs (variables)
+   ========================= */
+/* :root = l'endroit où on met des variables globales pour tout le site */
+:root {
+  --Couleur1: #0064a9;  /* exemple : texte principal */
+  --Couleur2: #2fd2d4;  /* exemple : fond clair / hover */
+  --Couleur3: #318494;  /* exemple : bordures */
+  --Couleur4: #56b6f1;  /* exemple : fond blanc */
+  --Couleur5: #b5ddf2;  /* exemple : texte secondaire */
+  --Couleur6:#FFFFFF;  /* exemple : texte secondaire */
+  --Couleur7:#F9DAD0;
+  --Couleur8: #0292B7;
+  --Couleur9: #B5DFCA;
+  --Couleur10:#3E5560;
+}
+
+/* =========================
+   Réglages de base
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: circle;
+  color: #0292B7;
+}
+
+.line-text{
+  white-space: pre-line; /* affiche les retours à la ligne */
+}
+
+.apropos__p{
+    font-size: 18px;
+}
+
+@font-face {
+  font-family: 'Bold';
+  src: url('Police/Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Titres en Montserrat */
+h1, h2, h3 {
+  font-family: 'Bold', serif;
+  color: #0064a9;
+}
+
+h2{
+    font-size: 30px;
+}
+
+
+body,p{
+  font-family: 'Montserrat',sans-serif;
+}
+
+/* Largeur max du contenu */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+.header {
+  /* Image de fond derrière le logo */
+  background-image: url("vague_2.png");
+  background-size: cover;      /* l’image couvre tout le header */
+  background-position: center; /* centrée */
+  background-repeat: no-repeat;
+
+  height: 400px;               /* hauteur du header (modifiable) */
+
+  display: flex;               /* pour centrer le logo */
+  align-items: center;         /* centre verticalement */
+  justify-content: center;     /* centre horizontalement */
+  position: relative;
+  text-align: center;
+}
+.header__content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+/* Logo */
+.header__logo {
+  width: 350px;   /* taille du logo (à ajuster) */
+  height: auto;
+  display: block;
+  margin: 0;
+}
+/* ===== Carousel + pédales ===== */
+.carousel{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.carousel-btn{
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: #0b6aa9;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.carousel-track{
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 8px 4px;
+  flex: 1;
+}
+
+.thumb{
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  background: #fff;
+}
+
+.thumb.is-active{
+  border-color: #0b6aa9;
+}
+
+/* ===== Lignes qui s'ouvrent ===== */
+.open-lines{
+  display: grid;
+  gap: 16px;
+}
+
+.line{
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(16,24,40,.08);
+  border: 1px solid #eaecf0;
+  padding: 18px;
+}
+
+.line-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.line-photo{
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid #eaecf0;
+}
+
+.line-title{
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.line-text{
+  margin: 0 0 14px;
+  color: #475467;
+  line-height: 1.5;
+}
+
+.close-line{
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  background: #f2f4f7;
+  cursor: pointer;
+}
+
+@media (max-width: 900px){
+  .line-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+  border-top: 1px solid #eee;
+  padding: 18px 24px;
+}
+
+.footer__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap; /* si petit écran, ça passe à la ligne */
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__brand {
+  margin: 0;
+  font-weight: 700;
+}
+
+.footer__links {
+  display: flex;
+  gap: 12px;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: var(--Couleur1);
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE (téléphone)
+   ========================= */
+@media (max-width: 800px) {
+  .apropos {
+    grid-template-columns: 1fr;
+  }
+
+  .commande-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* IMPORTANT : pour que hidden marche */
+.line[hidden] { display: none !important; }
+
+/* Conteneur des lignes ouvertes */
+.open-lines{
+  max-width: 1100px;
+  margin: 28px auto 0;
+  padding: 0 20px;
+}
+
+/* La “ligne” (carte) */
+.line{
+  background: #fff;
+  border: 1px solid #e9eef5;
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* Grille 2 colonnes */
+.line-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.line-photo{
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  display: block;
+  background: #f3f5f8;
+}
+
+/* Colonne droite */
+.line-title{
+  margin: 0 0 10px 0;
+  font-size: 30px;
+}
+
+.line-text{
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #3a4a5a;
+}
+
+/* Bouton fermer */
+.close-line{
+  border: 0;
+  background: #f1f3f6;
+  padding: 12px 18px;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+/* Responsive : 1 colonne */
+@media (max-width: 850px){
+  .line-grid{
+    grid-template-columns: 1fr;
+  }
+  .line-title{
+    font-size: 26px;
+  }
+}

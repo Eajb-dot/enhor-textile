@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enhor textile 英皓</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Migra&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Goody&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER : logo + menu
+       ========================= -->
+  <header class="header">
+
+    <!-- Conteneur central -->
+    <div class="header__content">
+
+      <!-- Logo -->
+      <img
+        class="header__logo"
+        src="new_Logo_blanc.png"
+        alt="Logo de la marque"
+      >
+      <nav class="header__nav">
+        <a class="header__link" href="#apropos">A propos</a>
+        <a class="header__link" href="#commande">Commande</a>
+        <a class="header__link" href="#contact">Contact</a>
+      </nav>
+
+    </div>
+
+  </header>
+
+  <!-- =========================
+       MAIN : le contenu
+       ========================= -->
+  <main class="container">
+
+    <!-- =========================
+         SECTION : À propos
+         - 2 images à gauche
+         - texte à droite
+         ========================= -->
+    <section id="apropos" class="section">
+      <h2 class="section__title">À propos</h2>
+
+      <!-- Mise en page en 2 colonnes : gauche (images) + droite (texte) -->
+      <div class="apropos">
+        <!-- Colonne gauche : deux images -->
+        <div class="apropos__images">
+          <!-- Remplace les src par tes images -->
+          <img class="apropos__img" src="A_propos_capture.png" alt="Image à propos 1">
+          
+        </div>
+
+        <div class="apropos__texte">
+          <!-- Petit titre au-dessus du paragraphe -->
+          <h3 class="apropos__subtitle">Bienvenue chez Enhor Textile 英皓 </h3>
+
+          <!-- Paragraphe -->
+          <p class="apropos__p">
+            Notre équipe vous propose une vente au détail avec une sélection
+            de tissus personnalisable et une vente en gros totalement remodelage
+            avec votre patron. Le choix de nos tissus reflètent notre engagement
+            avec des certifications de qualité.
+          </p>
+          <!-- Image des certifications sous le paragraphe -->
+          <img
+            class="apropos__certifications"
+            src="Certifications_couleur.png"
+            alt="Certifications et labels textiles"
+          >
+        </div>
+      </div>
+    </section>
+
+</div>
+      </div>
+    </section>
+
+    <!-- =========================
+         SECTION : Commande
+         - un titre
+         - un texte au-dessus de chaque bouton
+         - 3 boutons sur une seule ligne horizontale
+         ========================= -->
+    <section id="commande" class="section">
+      <h2 class="section__title">Commande</h2>
+
+      <!-- Conteneur des 3 boutons -->
+      <div class="commande-grid">
+
+        <!-- Bouton 1 -->
+        <div class="commande-item ">
+          
+         <a href="modelooo.html" class="commande-card item-1" >
+            <!-- Image = bouton -->
+            <img
+              src="Short_bouton.png"
+              alt="Commande à partir d’un modèle"
+              class="btn-image"
+            >
+          </a>
+          <p class="commande-item__text">À partir d’un modèle</p>
+
+          <!-- Lien cliquable -->
+        </div>
+
+      <!-- Bouton 2 -->
+        <div class="commande-item ">
+
+          <a href="#" class="commande-card item-2" id="openPatronModal">
+            <img
+              src="Compo_bouton.png"
+              alt="Commande à composer"
+              class="btn-image"
+            >
+          </a>
+          <p class="commande-item__text">J'ai mon patron</p>
+        </div>
+        
+        <!-- Vignette patron -->
+      <div class="overlay" id="patronOverlay">
+        <div class="vignette">
+          <button class="close" id="closePatron">✕</button>
+          
+          <div class="vignette__header">
+            <h4 class="vignette__title">Vous avez un patron ?</h4>
+          </div>
+
+          <p class="text__patron">
+            Pour nous confier la réalisation de votre modèle, vous pouvez nous envoyer
+            par e-mail votre <strong>patron accompagné des dimensions</strong>.<br><br>
+
+            Nous disposons d’un <strong>large choix de tissus</strong> :
+            lin, coton, polyester, spandex.<br><br>
+
+            <strong>N’hésitez pas à nous demander le catalogue.</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+  <!-- =========================
+       FOOTER : marque + langues + email
+       ========================= -->
+  <footer class="footer">
+    <div class="footer__inner">
+
+      <!-- Nom de la marque -->
+      <p class="footer__brand">© Enhor Textile 英皓</p>
+
+      <!-- Liens de langue (exemple) -->
+      <!-- Tu peux remplacer les href par tes vraies pages :
+           index-en.html, index-zh.html etc. -->
+      <div class="footer__links">
+        <a class="footer__link" href="Enhor_textile_index.html">Français</a>
+        <a class="footer__link" href="index_en.html">English</a>
+      </div>
+
+      <!-- Email cliquable -->
+      <a class="footer__link" href="mailto:vicky@yinghaotex.com">vicky@yinghaotex.com</a>
+    </div>
+  </footer>
+  <script src="Home-fr.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Models – Enhor Textile 英皓</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Migra&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Goody&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="modele.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER : logo
+       ========================= -->
+  <header class="header">
+
+    <div class="header__content">
+      <img
+        class="header__logo"
+        src="new_Logo_blanc.png"
+        alt="Brand logo"
+      >
+    </div>
+
+  </header>
+
+  <!-- =========================
+       MAIN CONTENT
+       ========================= -->
+  <main class="container">
+
+        <section id="about" class="section">
+            <h2 class="section__title">Choose your model.</h2>
+
+            <div class="apropos">
+                <div class="apropos__texte">
+                    <p class="apropos__p">
+                        Our team offers made-to-measure swimwear models designed to adapt to your everyday needs:
+                        Technical, Lightweight, Quick-drying or Water-repellent.
+                        If a model requires adjustments, feel free to contact us by email.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="models-page">
+
+            <!-- CAROUSEL -->
+            <div class="carousel" aria-label="Model photos">
+                <button class="carousel-btn" type="button" id="prevBtn" aria-label="Previous">‹</button>
+
+                <div class="carousel-track" id="track">
+                    <!-- Clickable thumbnails -->
+                    <img class="thumb is-active" src="Stretch_swim_photo.png" alt="Model photo 1"
+                        data-id="p1" data-full="Stretch_swim_photo.png"
+                        data-title="Model 1 — Stretch Swim"
+                        data-text="Water-repellent and 4-way stretch fabric\n Elastic waistband\n Comfort ensured thanks to mesh lining\n" />
+
+                    <img class="thumb" src="Swin_short_2.png" alt="Model photo 2"
+                        data-id="p2" data-full="Swin_short_2.png"
+                        data-title="Model 2 — Swim Short"
+                        data-text="Quick-drying fabric\n Elastic waistband\n 2 front pockets and 1 back pocket with flap\n Optional mesh lining available\n" />
+
+                    <img class="thumb" src="shot_3.png" alt="Model photo 3"
+                        data-id="p3" data-full="shot_3.png"
+                        data-title="Wellington Blue Fabric"
+                        data-text="100% Recycled Polyester\n Suitable for all our models" />
+                </div>
+
+                <button class="carousel-btn" type="button" id="nextBtn" aria-label="Next">›</button>
+            </div>
+
+            <!-- EXPANDING LINES (2 COLUMNS) -->
+            <div class="open-lines" id="openLines">
+
+                <!-- Line 1 -->
+                <article class="line" id="line-p1" hidden>
+                    <div class="line-grid">
+                        <div class="line-left">
+                            <img class="line-photo" src="" alt="Selected photo">
+                        </div>
+                        <div class="line-right">
+                            <h3 class="line-title"></h3>
+                            <p class="line-text"></p>
+                            <button class="close-line" type="button" data-close>Close</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Line 2 -->
+                <article class="line" id="line-p2" hidden>
+                    <div class="line-grid">
+                        <div class="line-left">
+                            <img class="line-photo" src="" alt="Selected photo">
+                        </div>
+                        <div class="line-right">
+                            <h3 class="line-title"></h3>
+                            <p class="line-text"></p>
+                            <button class="close-line" type="button" data-close>Close</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Line 3 -->
+                <article class="line" id="line-p3" hidden>
+                    <div class="line-grid">
+                        <div class="line-left">
+                            <img class="line-photo" src="" alt="Selected photo">
+                        </div>
+                        <div class="line-right">
+                            <h3 class="line-title"></h3>
+                            <p class="line-text"></p>
+                            <button class="close-line" type="button" data-close>Close</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    <script src="modele.js"></script>
+  </main>
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+  <footer class="footer">
+    <div class="footer__inner">
+
+      <p class="footer__brand">© Enhor Textile 英皓</p>
+
+      <div class="footer__links">
+        <a class="footer__link" href="index_en.html">Home</a>
+        <a class="footer__link" href="modelooo.html">French</a>
+        <a class="footer__link" href="modele-en.html">English</a>
+      </div>
+
+      <a class="footer__link" href="mailto:vicky@yinghaotex.com">vicky@yinghaotex.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>

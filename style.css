@@ -1,0 +1,492 @@
+
+/* =========================
+   Palette de couleurs (variables)
+   ========================= */
+/* :root = l'endroit où on met des variables globales pour tout le site */
+:root {
+  --Couleur1: #0064a9;  /* exemple : texte principal */
+  --Couleur2: #2fd2d4;  /* exemple : fond clair / hover */
+  --Couleur3: #318494;  /* exemple : bordures */
+  --Couleur4: #56b6f1;  /* exemple : fond blanc */
+  --Couleur5: #b5ddf2;  /* exemple : texte secondaire */
+  --Couleur6:#FFFFFF;  /* exemple : texte secondaire */
+  --Couleur7:#F9DAD0;
+  --Couleur8: #0292B7;
+  --Couleur9: #B5DFCA;
+  --Couleur10:#3E5560;
+}
+
+/* =========================
+   Réglages de base
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+@font-face {
+  font-family: 'Bold';
+  src: url('Police/Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Titres en Montserrat */
+h1, h2, h3 {
+  font-family: 'Bold', serif;
+}
+
+h4{
+  font-family: "Bold",serif;
+  font-size:  30px;
+  text-align: center;
+
+}
+.text__patron{
+  font-family: 'Montserrat',sans-serif;
+  text-align: left ;
+  justify-content: center;
+}
+
+body,p{
+  font-family: 'Montserrat',sans-serif;
+}
+
+/* Largeur max du contenu */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Sections */
+.section {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--Couleur5); /* au lieu de #eee */
+}
+
+/* Titres de section */
+.section__title {
+  margin: 0 0 30px 0;
+  font-family: "Bold";
+}
+#apropos .section__title{
+  color: #0064a9;
+  font-size: 40px;
+}
+#about .section__title{
+  color: #0064a9;
+  font-size: 40px;
+}
+#order .section__title {
+  color: var(--Couleur1);
+  font-size: 40px;
+}
+
+#commande .section__title {
+  color: var(--Couleur1);
+  font-size: 40px;
+}
+
+#contact .section__title {
+  text-align: center;
+  color: var(--Couleur1);
+  font-size: 30px;
+}
+
+#commande p{
+  color: var(--Couleur10);
+  text-align: center;
+}
+
+.header {
+  /* Image de fond derrière le logo */
+  background-image: url("vague_2.png");
+  background-size: cover;      /* l’image couvre tout le header */
+  background-position: center; /* centrée */
+  background-repeat: no-repeat;
+
+  height: 500px;               /* hauteur du header (modifiable) */
+
+  display: flex;               /* pour centrer le logo */
+  align-items: center;         /* centre verticalement */
+  justify-content: center;     /* centre horizontalement */
+  position: relative;
+  text-align: center;
+}
+.header__content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+/* Logo */
+.header__logo {
+  width: 350px;   /* taille du logo (à ajuster) */
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+.header__nav{
+  display: flex;
+  gap: 20px;
+  margin-top: 0;
+  padding: 0;
+}
+.header__link {
+  color: var(--Couleur6);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header__link:hover {
+  text-decoration: underline;
+}
+
+
+
+/* =========================
+   À PROPOS : 2 images gauche / texte droite
+   ========================= */
+
+/* conteneur 2 colonnes */
+.apropos {
+  display: grid;                 /* grille */
+  grid-template-columns: 1fr 1fr; /* 2 colonnes égales */
+  gap: 20px;
+  align-items: start;
+}
+
+/* Images (colonne gauche) */
+.apropos__images {
+  display: grid;
+  gap: 12px; /* espace entre les 2 images */
+}
+
+/* Style des images */
+.apropos__img {
+  width: 100%;
+  height: 400px;      /* hauteur fixe (modifiable) */
+  object-fit: cover;  /* évite de déformer l’image */
+  border-radius: 12px;
+}
+
+/* Texte à droite */
+.apropos__texte {
+  padding: 8px;
+}
+
+/* Petit titre dans la partie À propos (colonne droite) */
+.apropos__subtitle {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  color: var(--Couleur10);
+  font-family: "Poppins", sans-serif; /* si tu as Montserrat */
+}
+
+/* Paragraphe (optionnel, juste pour l’espace) */
+.apropos__p {
+  margin: 0 0 16px 0;
+  text-align: justify;
+  color: var(--Couleur10);
+  line-height: 1.6;     /* espace entre les lignes */
+}
+
+
+.apropos__certifications {
+  margin-top: 20px;     /* espace sous le paragraphe */
+  width: 100%;          /* prend toute la largeur de la colonne droite */
+  max-width: 420px;     /* limite la taille (ajustable) */
+  height: auto;         /* garde les proportions */
+  display: block;
+}
+
+
+/* =========================
+   COMMANDE : 3 boutons sur une ligne
+   ========================= */
+.commande-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 colonnes */
+  gap: 32px;
+}
+
+.commande-link {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: inherit;
+}
+
+.commande-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 260px;              /* hauteur du rectangle */
+  border-radius: 20px;
+  text-decoration: none;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.commande-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.item-1 {
+  background-color: #73caef;
+}
+
+.item-2 {
+  background-color:#73caef;
+}
+
+.item-3 {
+  background-color: #6FC1D6;
+}
+
+.commande-item__text {
+  margin-top: 18px;
+  text-align:left;
+  font-weight: 600;
+  color: var(--Couleur10);
+}
+
+/* Boutons sous forme d'image */
+.btn-image {
+  max-width: 200px;     /* limite la taille (modifiable) */
+  height: auto;         /* garde les proportions */
+  display: block;
+  cursor: pointer;      /* main au survol */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Effet au survol (optionnel mais joli) */
+.btn-image:hover {
+  transform: scale(1.05); /* léger zoom */
+  opacity: 0.9;
+}
+
+
+/* =========================
+   FORMULAIRE
+   ========================= */
+.form {
+  max-width: 520px;    /* le formulaire ne prend pas toute la largeur */
+  margin: 0 auto;
+  display: grid;
+  gap: 10px;
+}
+
+.form__label {
+  font-weight: 600;
+  color: var(--Couleur1);
+}
+
+.form__input,
+.form__textarea {
+  padding: 12px;
+  border: 1px solid var(--Couleur5);
+  border-radius: 10px;
+  font: inherit; /* garde la même police que la page */
+}
+
+.form__textarea {
+  min-height: 140px;
+  resize: vertical; /* l'utilisateur peut agrandir verticalement */
+}
+
+.btn {
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Bouton principal (Envoyer) */
+.btn--primary {
+  background-color: var(--Couleur1); /* fond du bouton */
+  color: var(--Couleur6);            /* texte */
+  border: none;
+  width: 100%;                       /* optionnel : pleine largeur */
+}
+
+/* Effet au survol */
+.btn--primary:hover {
+  background-color: var(--Couleur8);
+}
+
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+  border-top: 1px solid #eee;
+  padding: 18px 24px;
+}
+
+.footer__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap; /* si petit écran, ça passe à la ligne */
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__brand {
+  margin: 0;
+  font-weight: 700;
+}
+
+.footer__links {
+  display: flex;
+  gap: 12px;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: var(--Couleur1);
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE (téléphone)
+   ========================= */
+@media (max-width: 800px) {
+  .apropos {
+    grid-template-columns: 1fr;
+  }
+
+  .commande-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* === OVERLAY VIGNETTE PATRON === */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.overlay.is-open{display : flex;}
+
+/* === VIGNETTE === */
+.vignette {
+  background: #fff;
+  max-width: 500px;
+  width: 50%;
+  padding: 36px 40px;
+  overflow: auto;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  animation: fadeInScale 0.25s ease;
+  position: relative;
+}
+.vignette p {
+  margin: 18px 0;      /* espace au-dessus et en dessous */
+  line-height: 1.7;   /* meilleure lisibilité */
+}
+
+/* Animation */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.vignette__header{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.vignette__title{
+  margin: 0;
+}
+
+/* bouton X */
+.vignette .close{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+/* Bouton fermer */
+.vignette .close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.vignette .close:hover {
+  opacity: 1;
+}
+
+/* Header avec icône */
+.vignette .header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.vignette .icon {
+  font-size: 24px;
+}
+
+.vignette h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* Texte */
+.vignette p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .vignette {
+    padding: 22px;
+  }
+}

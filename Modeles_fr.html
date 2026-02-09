@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Modèles-Enhor textile 英皓</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Migra&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Goody&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="modele.css" />
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="page-header">
+        <!-- Conteneur central -->
+        <div class="header__content">
+
+            <!-- Logo -->
+            <img
+                class="header__logo"
+                src="new_Logo_blanc.png"
+                alt="Logo de la marque"
+            >
+        </div>
+        <h1 class="page-title">Choisissez votre modèle.</h1>
+        <p class="page-intro">
+            Sélectionnez une photo du modèle pour afficher les détails tissu et passer commande.
+        </p>
+    
+        
+    </header>
+
+    <!-- MAIN 2 COLONNES -->
+    <main class="layout">
+        <section class="models-page">
+
+            <!-- CAROUSEL + PEDALES -->
+            <div class="carousel" aria-label="Photos des modèles">
+                <button class="carousel-btn" type="button" id="prevBtn" aria-label="Précédent">‹</button>
+
+                <div class="carousel-track" id="track">
+                    <!-- Thumbs cliquables -->
+                    <img class="thumb is-active" src="Stretch_swim_photo.png" alt="Photo 1"
+                        data-id="p1" data-full="Stretch_swim_photo.png"
+                        data-title="Modèle 1 — Stretch Swim"
+                        data-text="Tissu déperlant et extensible dans 4 directions\n Fermeture élastique\n Confort assurégrâce à la doublure en filet\n"
+
+                    <img class="thumb" src="Swin_short_2.png" alt="Photo 2"
+                        data-id="p2" data-full="Swim_short_2.png"
+                        data-title="Modèle 2 — Swim Short"
+                        data-text="Description courte du modèle 2 (à personnaliser)." />
+
+                    <img class="thumb" src="Patron2_bouton.png" alt="Photo 3"
+                        data-id="p3" data-full="Patron2_bouton.png"
+                        data-title="Modèle 3 — Patron"
+                        data-text="Description courte du modèle 3 (à personnaliser)." />
+                </div>
+
+                <button class="carousel-btn" type="button" id="nextBtn" aria-label="Suivant">›</button>
+            </div>
+
+            <!-- LIGNES QUI S'OUVRENT (2 colonnes) -->
+            <div class="open-lines" id="openLines">
+
+                <!-- Ligne 1 -->
+                <article class="line" id="line-p1" hidden>
+                    <div class="line-grid">
+                        <div class="line-left">
+                        <img class="line-photo" src="" alt="Photo sélectionnée">
+                        </div>
+                        <div class="line-right">
+                            <h3 class="line-title"></h3>
+                            <p class="line-text"></p>
+
+                            <button class="close-line" type="button" data-close>Fermer</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Ligne 2 -->
+                <article class="line" id="line-p2" hidden>
+                    <div class="line-grid">
+                        <div class="line-left">
+                        <img class="line-photo" src="" alt="Photo sélectionnée">
+                        </div>
+                        <div class="line-right">
+                            <h3 class="line-title"></h3>
+                            <p class="line-text"></p>
+
+                            <button class="close-line" type="button" data-close>Fermer</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Ligne 3 -->
+                <article class="line" id="line-p3" hidden>
+                    <div class="line-grid">
+                        <div class="line-left">
+                        <img class="line-photo" src="" alt="Photo sélectionnée">
+                        </div>
+                        <div class="line-right">
+                            <h3 class="line-title"></h3>
+                            <p class="line-text"></p>
+
+                            <button class="close-line" type="button" data-close>Fermer</button>
+                        </div>
+                    </div>
+                </article>
+        </section>
+
+    </div>
+    <script src="modele.js"></script>
+
+    <footer class="footer">
+        <div class="footer__inner">
+
+        <!-- Nom de la marque -->
+        <p class="footer__brand">© Enhor Textile 英皓</p>
+
+        <!-- Liens de langue (exemple) -->
+        <!-- Tu peux remplacer les href par tes vraies pages :
+            index-en.html, index-zh.html etc. -->
+        <div class="footer__links">
+            <a class="footer__link" href="Enhor_textile_index.html">Français</a>
+            <a class="footer__link" href="index_en.html">English</a>
+        </div>
+
+        <!-- Email cliquable -->
+        <a class="footer__link" href="mailto:vicky@yinghaotex.com">vicky@yinghaotex.com</a>
+        </div>
+    </footer>
+
+    <script src="modele.js"></script>
+</body>
+</html>
