@@ -170,7 +170,7 @@ body,p{
 /* Style des images */
 .apropos__img {
   width: 100%;
-  height: 400px;      /* hauteur fixe (modifiable) */
+  height: 600px;      /* hauteur fixe (modifiable) */
   object-fit: cover;  /* évite de déformer l’image */
   border-radius: 12px;
 }
@@ -490,3 +490,4 @@ body,p{
     padding: 22px;
   }
 }
+
